@@ -7,3 +7,17 @@
   background: #1a1a1a;
   padding: 5px;
 }
+
+txtl {
+  text-align: left;
+}
+
+txtr {
+  text-align: right;
+}
+
+txtc {
+  text-align: center;
+}
+
+
