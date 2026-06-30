@@ -6,7 +6,7 @@ window.addEventListener('keydown', (event) => {
   const artboard = document.getElementById('artboard');
   
   // Is control/command down
-  const isControlDown = event.CtrlKey || event.metaKey;
+  const isControlDown = event.ctrlKey || event.metaKey;
     
   // If Control/Command +
   if (isControlDown && (event.key === '+' || event.key === '=')) {
@@ -26,12 +26,9 @@ window.addEventListener('keydown', (event) => {
   if (currentZoom > 4) currentZoom = 4;
 
   // Update Artboard Render
-  const awidth = Number(artboard.getAttribute('width'));
-  const aheight = Number(artboard.getAttribute('height'));
-  
-  artboard.style.width = `${awidth * currentZoom}px`;
-  artboard.style.height = `${aheight * currentZoom}px`;
-  artboard.style.transform = 'none';
+  if (typeof updateArtboardRender === 'function') {
+    updateArtboardRender();
+  }
 
   // Update Zoom Text at bottom of page
   const ZoomPercent = Math.round(currentZoom * 100);
