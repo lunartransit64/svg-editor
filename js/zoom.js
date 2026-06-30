@@ -30,5 +30,5 @@ window.addEventListener('keydown', (event) => {
 
   // Update Zoom Text at bottom of page
   const ZoomPercent = Math.round(currentZoom * 100);
-  document.querySelector('.zoom-num').textContent = zoomPercent;
+  document.querySelector('.zoom-num').textContent = ZoomPercent;
 });
