@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-body {
+html, body {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -20,6 +20,7 @@ body {
   flex: 1;
   justify-content: center;
   align-items: center;
+  background-color: #2a2a2a;
 }
 
 #footer {
