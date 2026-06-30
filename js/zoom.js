@@ -29,7 +29,7 @@ window.addEventListener('keydown', (event) => {
   const awidth = Number(artboard.getAttribute('width'));
   const aheight = Number(artboard.getAttribute('height'));
   
-  artboard.style.width = `${awidth * currentZoom}`px;
+  artboard.style.width = `${awidth * currentZoom}px`;
   artboard.style.height = `${aheight * currentZoom}px`;
   artboard.style.transform = 'none';
 
