@@ -14,7 +14,7 @@ window.addEventListener('keydown', (event) => {
     currentZoom += 0.1;
   } 
   // If Control/Command -
-  elseif (isControlDown && (event.key === '-')) {
+  else if (isControlDown && (event.key === '-')) {
       event.preventDefault(); // Stops Browser from zooming itself
       currentZoom -= -0.1;
   } else {
