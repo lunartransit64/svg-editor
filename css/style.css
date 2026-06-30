@@ -1,3 +1,10 @@
+/* Reset all formatting */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Sections */
 #navbar {
   background: #1a1a1a;
 }
@@ -8,6 +15,7 @@
   padding: 5px;
 }
 
+/* Text Alignment */
 txtl {
   display: block;
   text-align: left;
@@ -21,6 +29,10 @@ txtr {
 txtc {
   display: block;
   text-align: center;
+}
+
+p {
+  text-color: white;
 }
 
 
