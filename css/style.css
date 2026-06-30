@@ -11,8 +11,13 @@
 
 #footer {
   display: block;
-  background: #1a1a1a;
+  background-color: #1a1a1a;
   padding: 5px;
+}
+
+/* Universal Text Colour */
+p {
+  color: white;
 }
 
 /* Text Alignment */
@@ -31,8 +36,6 @@ txtc {
   text-align: center;
 }
 
-p {
-  text-color: white;
-}
+
 
 
