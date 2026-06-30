@@ -9,14 +9,17 @@
 }
 
 txtl {
+  display: block;
   text-align: left;
 }
 
 txtr {
+  display: block;
   text-align: right;
 }
 
 txtc {
+  display: block;
   text-align: center;
 }
 
