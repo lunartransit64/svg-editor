@@ -4,38 +4,45 @@
   padding: 0;
 }
 
-/* Sections */
-#navbar {
-  background: #1a1a1a;
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #1a1a1a;
 }
 
-#footer {
-  display: block;
-  background-color: #1a1a1a;
+/* Sections */
+#navbar {
   padding: 5px;
 }
 
-/* Universal Text Colour */
-p {
-  color: white;
+#canvas {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer {
+  padding: 5px;
 }
 
 /* Text Alignment */
 .txtl {
-  display: block;
   text-align: left;
 }
 
 .txtr {
-  display: block;
   text-align: right;
 }
 
 .txtc {
-  display: block;
   text-align: center;
 }
 
+/* Text Formatting */
+p {
+  color: white;
+}
 
 
 
