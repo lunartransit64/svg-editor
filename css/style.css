@@ -21,17 +21,17 @@ p {
 }
 
 /* Text Alignment */
-txtl {
+.txtl {
   display: block;
   text-align: left;
 }
 
-txtr {
+.txtr {
   display: block;
   text-align: right;
 }
 
-txtc {
+.txtc {
   display: block;
   text-align: center;
 }
