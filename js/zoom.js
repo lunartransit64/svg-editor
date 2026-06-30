@@ -26,7 +26,12 @@ window.addEventListener('keydown', (event) => {
   if (currentZoom > 4) currentZoom = 4;
 
   // Update Artboard Render
-  artboard.style.transform = `scale(${currentZoom})`;
+  const awidth = Number(artboard.getAttribute('width'));
+  const aheight = Number(artboard.getAttribute('height'));
+  
+  artboard.style.width = `${awidth * currentZoom}`px;
+  artboard.style.height = `${aheight * currentZoom}px`;
+  artboard.style.transform = 'none';
 
   // Update Zoom Text at bottom of page
   const ZoomPercent = Math.round(currentZoom * 100);
