@@ -9,7 +9,7 @@ window.addEventListener('keydown', (event) => {
   const isControlDown = event.CtrlKey || event.metaKey;
     
   // If Control/Command +
-  if (isControlDown && (event.key === '+' || event.key === '=') {
+  if (isControlDown && (event.key === '+' || event.key === '=')) {
     event.preventDefault(); // Stops Browser from zooming itself
     currentZoom += 0.1;
   } 
