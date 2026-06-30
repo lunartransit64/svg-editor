@@ -3,8 +3,8 @@ let rect = null, sx, sy;
 //
 artboard.addEventListener('mousedown', (e) => {
   // Find Position
-  sx = e.offset.X / currentZoom;
-  sy = e.offset.Y / currentZoom;
+  sx = e.offsetX / currentZoom;
+  sy = e.offsetY / currentZoom;
 
   // Create Rectangle
   rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
@@ -18,8 +18,8 @@ artboard.addEventListener('mousedown', (e) => {
 artboard.addEventListener('mousemove', (e) => {
   if (!rect) return;
   
-  const cx = e.offset.X / currentZoom;
-  const cy = e.offset.Y / currentZoom;
+  const cx = e.offsetX / currentZoom;
+  const cy = e.offsetY / currentZoom;
 
   rect.setAttribute('width', Math.abs(cx - sx));
   rect.setAttribute('height', Math.abs(cy - sy));
