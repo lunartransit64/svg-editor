@@ -20,4 +20,15 @@ window.addEventListener('keydown', (event) => {
   } else {
     return;
   }
+
+  // Limit the zoom amount
+  if (currentZoom < 0.2) currentZoom = 0.2;
+  if (currentZoom > 4) currentZoom = 4;
+
+  // Update Artboard Render
+  artboard.style.transform = 'scale(${CurrentZoom})';
+
+  // Update Zoom Text at bottom of page
+  const ZoomPercent = Math.round(currentZoom * 100);
+  document.querySelector('.zoom-num').textContent = zoomPercent;
 });
