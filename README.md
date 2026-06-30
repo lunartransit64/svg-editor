@@ -1,1 +1,1 @@
-# svg-editor.github.io
+# svg-editor
