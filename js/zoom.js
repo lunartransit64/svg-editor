@@ -16,7 +16,7 @@ window.addEventListener('keydown', (event) => {
   // If Control/Command -
   else if (isControlDown && (event.key === '-')) {
       event.preventDefault(); // Stops Browser from zooming itself
-      currentZoom -= -0.1;
+      currentZoom -= 0.1;
   } else {
     return;
   }
@@ -26,7 +26,7 @@ window.addEventListener('keydown', (event) => {
   if (currentZoom > 4) currentZoom = 4;
 
   // Update Artboard Render
-  artboard.style.transform = 'scale(${CurrentZoom})';
+  artboard.style.transform = `scale(${currentZoom})`;
 
   // Update Zoom Text at bottom of page
   const ZoomPercent = Math.round(currentZoom * 100);
