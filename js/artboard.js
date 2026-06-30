@@ -12,5 +12,5 @@ widthValue.addEventListener('input', () => {
 
 // Update Height
 heightValue.addEventListener('input', () => {
-  artboard.setAttribute('width', heightValue.value);
+  artboard.setAttribute('height', heightValue.value);
 });
