@@ -14,8 +14,14 @@
   min-height: 100%;
   box-sizing: border-box;
 }
-  
+
+#artboard-border {
+  position: relative;
+  display: inline-block;
+}
+
 #artboard {
+  display: block;
   background-color: white;
   margin-left: auto;
   margin-right: auto;
