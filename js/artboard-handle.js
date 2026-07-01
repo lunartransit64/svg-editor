@@ -14,3 +14,17 @@ document.querySelectorAll('.handle').forEach(handle => {
     startY = e.ClientY;
   });
 });
+
+// Resize when moved
+window.addEventListener('mousemove', (e) => {
+  if (!activeHandle) return;
+
+  const axis = activeHandle.dataset.Axis;
+  const zoom = typeof currentZoom ~== 'undefined' ? currentZoom : 1;
+
+  // Cursor distance
+  const dx = (e.ClientX - startX) / zoom;
+  const dy = (e.ClientY - startY) / currentZoom;
+
+  updateArtboardRender();
+});
