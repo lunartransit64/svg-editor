@@ -1,0 +1,7 @@
+.navbar-tab {
+  display: none;
+}
+
+.navbar-tab.active {
+  display: flex;
+}
