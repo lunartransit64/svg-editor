@@ -42,7 +42,7 @@
 .tc { top: -5px; left: 50%; cursor: ns-resize; }
 .tr { top: -5px; right: -5px; cursor: nesw-resize; }
 .ml { top: 50%; left: -5px; cursor: ew-resize; }
-.tr { top: 50%; right: -5px; cursor: ew-resize; }
+.mr { top: 50%; right: -5px; cursor: ew-resize; }
 .bl { bottom: -5px; left: -5px; cursor: nesw-resize; }
 .bc { bottom: -5px; left: 50%; cursor: ns-resize; }
 .br { bottom: -5px; right: -5px; cursor: nwse-resize; }
