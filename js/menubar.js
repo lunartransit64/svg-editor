@@ -1,4 +1,4 @@
-document.querySelectorAll('.tab-btn').forEach(button => {
+document.querySelectorAll('.menu-btn').forEach(button => {
   button.addEventListener('click', (e) => {
     // Reset
     document.querySelectorAll('tab-btn').forEach(button => btn.classList.remove('active'));
@@ -10,5 +10,5 @@ document.querySelectorAll('.tab-btn').forEach(button => {
     // Update Navbar
     const targetId = button.dataset.target;
     document.getElementById(targetId).classList.add('active');
-  }
+  });
 });
