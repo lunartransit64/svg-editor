@@ -33,7 +33,7 @@ window.addEventListener('mousemove', (e) => {
   const heightInput = document.getElementById('heightValue');
 
   // Linear Scaling (Shift Key) Diagonal
-  if (e.shiftKey && activeHandle.matches('.tl, .tr, .bl, .br')) {
+  if (activeHandle.matches('.tl, .tr, .bl, .br')) {
     let targetDx = activeHandle.matches('.tl, .bl') ? -dx : dx;
     
     let diagWidth = Math.max(50, startW + targetDx);
