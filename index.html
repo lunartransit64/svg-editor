@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>SVG Editor</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/artboard.css">
 </head>
 <body>
     <h1>SVG Editor</h1>
@@ -15,8 +16,19 @@
     </div>
     <div id="canvas">
         <div id="canvas-container">
-            <svg id="artboard" width="500" height="500">
-            </svg>
+            <div id="artboard-border">
+                <svg id="artboard" width="500" height="500">
+                </svg>
+
+                <div class="handle tl" data-axis="both"></div>
+                <div class="handle tc" data-axis="y"></div>
+                <div class="handle tr" data-axis="both"></div>
+                <div class="handle ml" data-axis="x"></div>
+                <div class="handle mr" data-axis="x"></div>
+                <div class="handle bl" data-axis="both"></div>
+                <div class="handle bc" data-axis="y"></div>
+                <div class="handle br" data-axis="both"></div>
+            </div>
         </div>
     </div>
     <div id="footer">
