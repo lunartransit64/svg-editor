@@ -1,12 +1,12 @@
 document.querySelectorAll('.menu-btn').forEach(button => {
   button.addEventListener('click', (e) => {
     // Reset Menubar
-    document.querySelectorAll('menubar-btn').forEach(btn => {
+    document.querySelectorAll('.menubar-btn').forEach(btn => {
       btn.classList.remove('active');
     });
 
     // Reset Navbar
-    document.querySelectorAll('menubar-btn').forEach(btn => {
+    document.querySelectorAll('.navbar-tab').forEach(btn => {
       btn.classList.remove('active');
     });
     
