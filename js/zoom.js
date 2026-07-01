@@ -23,7 +23,7 @@ window.addEventListener('keydown', (event) => {
 
   // Limit the zoom amount
   if (currentZoom < 0.2) currentZoom = 0.2;
-  if (currentZoom > 4) currentZoom = 4;
+  if (currentZoom > 10) currentZoom = 10;
 
   // Update Artboard Render
   if (typeof updateArtboardRender === 'function') {
