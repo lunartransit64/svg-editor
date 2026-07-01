@@ -47,14 +47,14 @@ window.addEventListener('mousemove', (e) => {
   // Bottom Handles
   if (activeHandle.matches('.bl, .bc, .br')) {
     const newHeight = Math.max(50, startH + dy);
-    artboard.setAttribute('width', newHeight);
+    artboard.setAttribute('height', newHeight);
     if (heightInput) heightInput.value = Math.round(newHeight);
   }
 
   // Top Handles
   if (activeHandle.matches('.tl, .tc, .tr')) {
     const newHeight = Math.max(50, startH - dy);
-    artboard.setAttribute('width', newHeight);
+    artboard.setAttribute('height', newHeight);
     if (heightInput) heightInput.value = Math.round(newHeight);
   }
 
