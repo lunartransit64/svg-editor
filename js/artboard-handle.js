@@ -26,6 +26,8 @@ window.addEventListener('mousemove', (e) => {
   const dx = (e.clientX - startX) / zoom;
   const dy = (e.clientY - startY) / zoom;
 
+  const widthInput = document.getElementById('widthValue');
+  
   // Right Handles
   if (activeHandle.matches('.mr, .tr, .br')) {
     const newWidth = Math.max(50, startW + dx);
@@ -35,7 +37,7 @@ window.addEventListener('mousemove', (e) => {
   
   // Left Handles
   if (activeHandle.matches('.ml, .tl, .bl')) {
-    const newWidth = Math.max(50, startW + dx);
+    const newWidth = Math.max(50, startW - dx);
     artboard.setAttribute('width', newWidth);
     if (widthInput) widthInput.value = Math.round(newWidth);
   }
