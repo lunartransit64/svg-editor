@@ -29,8 +29,8 @@ window.addEventListener('mousemove', (e) => {
   let dy = (e.clientY - startY) / zoom;
 
   // Width and Height
-  const widthInput = document.getElementById('widthValue');
-  const heightInput = document.getElementById('heightValue');
+  const widthInput = document.getElementById('artboard-width');
+  const heightInput = document.getElementById('artboard-height');
 
   // Linear Scaling (Shift Key) Diagonal
   if (activeHandle.matches('.tl, .tr, .bl, .br')) {
