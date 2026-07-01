@@ -10,8 +10,8 @@ document.querySelectorAll('.handle').forEach(handle => {
     // Cache starting dimention values
     startW = Number(artboard.getAttribute('width'));
     startH = Number(artboard.getAttribute('height'));
-    startX = e.ClientX;
-    startY = e.ClientY;
+    startX = e.clientX;
+    startY = e.clientY;
   });
 });
 
@@ -43,4 +43,9 @@ window.addEventListener('mousemove', (e) => {
   }
 
   updateArtboardRender();
+});
+
+// Stop when mouse up
+window.addEventListener('mouseup', (e) => {
+  activeHandle = null;
 });
