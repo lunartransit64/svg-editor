@@ -20,7 +20,7 @@ window.addEventListener('mousemove', (e) => {
   if (!activeHandle) return;
 
   const axis = activeHandle.dataset.Axis;
-  const zoom = typeof currentZoom ~== 'undefined' ? currentZoom : 1;
+  const zoom = typeof currentZoom !== 'undefined' ? currentZoom : 1;
 
   // Cursor distance
   const dx = (e.clientX - startX) / zoom;
