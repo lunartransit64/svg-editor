@@ -26,7 +26,9 @@ window.addEventListener('mousemove', (e) => {
   const dx = (e.clientX - startX) / zoom;
   const dy = (e.clientY - startY) / zoom;
 
+  // Width and Height
   const widthInput = document.getElementById('widthValue');
+  const heightInput = document.getElementById('heightValue');
   
   // Right Handles
   if (activeHandle.matches('.mr, .tr, .br')) {
@@ -40,6 +42,20 @@ window.addEventListener('mousemove', (e) => {
     const newWidth = Math.max(50, startW - dx);
     artboard.setAttribute('width', newWidth);
     if (widthInput) widthInput.value = Math.round(newWidth);
+  }
+
+  // Bottom Handles
+  if (activeHandle.matches('.bl, .bc, .br')) {
+    const newHeight = Math.max(50, startH + dy);
+    artboard.setAttribute('width', newHeight);
+    if (heightInput) heightInput.value = Math.round(newHeight);
+  }
+
+  // Top Handles
+  if (activeHandle.matches('.tl, .tc, .tr')) {
+    const newHeight = Math.max(50, startH - dy);
+    artboard.setAttribute('width', newHeight);
+    if (heightInput) heightInput.value = Math.round(newHeight);
   }
 
   updateArtboardRender();
