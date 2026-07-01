@@ -1,5 +1,5 @@
 let activeHandle = null;
-let startW, startH, startX, startY;
+let startW, startH, startX, startY, startRatio;
 
 // All Handles get a mouse down event
 document.querySelectorAll('.handle').forEach(handle => {
@@ -12,6 +12,8 @@ document.querySelectorAll('.handle').forEach(handle => {
     startH = Number(artboard.getAttribute('height'));
     startX = e.clientX;
     startY = e.clientY;
+
+    startRatio = startW / startH;
   });
 });
 
@@ -29,6 +31,12 @@ window.addEventListener('mousemove', (e) => {
   // Width and Height
   const widthInput = document.getElementById('widthValue');
   const heightInput = document.getElementById('heightValue');
+
+  // Linear Scaling (Shift Key) Diagonal
+  if (e.shiftKey && activeHandle.matches('.tl, .tr, .bl, .br')) {
+    let currentDx = activeHandle.matches('.tl, .bl') ? -dx : dy;
+    let currentXy = activeHandle.matches('.tr, .br') ? -dx : dy;
+  }
   
   // Right Handles
   if (activeHandle.matches('.mr, .tr, .br')) {
