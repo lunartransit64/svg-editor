@@ -1,3 +1,10 @@
+/* Sections */
+#navbar {
+  position: relative;
+  padding: 5px;
+  z-index: 10;
+}
+
 .navbar-tab {
   display: none;
 }
