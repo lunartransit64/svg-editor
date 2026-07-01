@@ -25,8 +25,8 @@ window.addEventListener('mousemove', (e) => {
   const zoom = typeof currentZoom !== 'undefined' ? currentZoom : 1;
 
   // Cursor distance
-  const dx = (e.clientX - startX) / zoom;
-  const dy = (e.clientY - startY) / zoom;
+  let dx = (e.clientX - startX) / zoom;
+  let dy = (e.clientY - startY) / zoom;
 
   // Width and Height
   const widthInput = document.getElementById('widthValue');
@@ -34,8 +34,16 @@ window.addEventListener('mousemove', (e) => {
 
   // Linear Scaling (Shift Key) Diagonal
   if (e.shiftKey && activeHandle.matches('.tl, .tr, .bl, .br')) {
-    let currentDx = activeHandle.matches('.tl, .bl') ? -dx : dy;
-    let currentXy = activeHandle.matches('.tr, .br') ? -dx : dy;
+    let targetDx = activeHandle.matches('.tl, .bl') ? -dx : dx;
+    
+    let diagWidth = Math.max(50, startW + targetDx);
+    let forcedH = diagWidth / startRatio;
+
+    if (activeHandle.matches('.tl, .tr')) {
+      dy = startH - forcedH;
+    } else {
+      dy = forcedH - startH;
+    }
   }
   
   // Right Handles
