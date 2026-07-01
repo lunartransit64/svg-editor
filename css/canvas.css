@@ -39,10 +39,10 @@
 }
 
 .tl { top: -5px; left: -5px; cursor: nwse-resize; }
-.tc { top: -5px; left: 50%; cursor: ns-resize; }
+.tc { top: -5px; left: 50%; transform: translateX(-50%); cursor: ns-resize; }
 .tr { top: -5px; right: -5px; cursor: nesw-resize; }
-.ml { top: 50%; left: -5px; cursor: ew-resize; }
-.mr { top: 50%; right: -5px; cursor: ew-resize; }
+.ml { top: 50%; left: -5px; transform: translateY(-50%); cursor: ew-resize; }
+.mr { top: 50%; right: -5px; transform: translateY(-50%); cursor: ew-resize; }
 .bl { bottom: -5px; left: -5px; cursor: nesw-resize; }
-.bc { bottom: -5px; left: 50%; cursor: ns-resize; }
+.bc { bottom: -5px; left: 50%; transform: translateX(-50%); cursor: ns-resize; }
 .br { bottom: -5px; right: -5px; cursor: nwse-resize; }
